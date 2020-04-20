@@ -1,9 +1,18 @@
 <script>
 
+let rps = ["rock" , "paper" ,"scissors"]
+
+//Function to pick random number
+
+function computerSelection(){
+    var computerChoice = rps[Math.floor(Math.random() * rps.length)];
+    //computerChoice = "paper";
+    return computerChoice;
+
 // Function for RPS
 
 function computerSelection (playerOne,computerPlay){
-    let response = ["rock" , "paper" ,"scissors"]
+
      
 
 
