@@ -1,0 +1,45 @@
+<script>
+
+// Function for RPS
+
+function computerSelection (playerOne,computerPlay){
+    let response = ["rock" , "paper" ,"scissors"]
+     
+
+
+
+     if (computerSelection) {
+        
+       if (playerOne == computerPlay){
+        console.log("It's a tie!")
+    }
+
+    else if (playerOne == "rock" && computerPlay == "scissors" ){
+        console.log("You win! Rock beats scissors")
+
+    }
+
+    else if (computerPlay == "paper"){
+        console.log("You loose. Paper beats rock")
+    }
+
+    else if (playerOne == "paper" && computerPlay == "rock"){
+        console.log("You win! Paper beats rock!")
+        
+    }
+
+    else if (computerPlay == "scissors"){
+        console.log("You lose. Scissors beats paper")
+    }
+
+    else if (playerOne == "scissors" && computerPLay == "paper"){
+        console.log("You win! Scissors beats paper")
+    }
+
+    else if (computerPlay == "rock"){
+        console.log("You Lose. Rock beats scissors")
+    }
+};
+}
+
+</script>
