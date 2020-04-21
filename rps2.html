@@ -3,7 +3,10 @@
     <head>
 <script>
     // function to generate randome string 
-  
+  let playerScore = 0;
+  let computerScore = 0;
+
+  let playerTotal= document.getElementById("playerScore").innerHTML
 
 function computerPlay () {
     let choice = ["rock", "paper" ,"scissors"];
@@ -19,10 +22,13 @@ function playRound(playerSelection,computerSelection){
 
     if (playerSelection.toLocaleLowerCase()==="Rock".toLocaleLowerCase()){
         if(computerSelection ==="scissors"){
-            return "You win! Rock beats scissors"
+            return "You win! Rock beats scissors  " + 'Your Score is  '  + ++playerScore;
+            
+            
         }
         else if(computerSelection==="paper"){
-            return "You lose! Paper covers rock!"
+            return "You lose! Paper covers rock!  " + 'My Score is  '  + ++computerScore;
+            
         }
 
         else {
@@ -33,10 +39,13 @@ function playRound(playerSelection,computerSelection){
     
         if (playerSelection.toLocaleLowerCase()==="Paper".toLocaleLowerCase()){
         if(computerSelection ==="Rock"){
-            return "You win! Paper covers Rock"
+            return "You win! Paper covers Rock  " + 'Your Score is  '  + ++playerScore;
+            
         }
         else if(computerSelection==="scissors"){
-            return "You lose! Scissors cuts paper"
+            return "You lose! Scissors cuts paper  " + 'My Score is  '  + ++computerScore;
+            
+            
         }
 
         else {
@@ -47,10 +56,13 @@ function playRound(playerSelection,computerSelection){
 
         if (playerSelection.toLocaleLowerCase()==="Scissors".toLocaleLowerCase()){
         if(computerSelection ==="Paper"){
-            return "You win! Scissors cuts paper"
+            return "You win! Scissors cuts paper " + 'Your Score is  '  + ++playerScore;
+            
+            
         }
         else if(computerSelection==="rock"){
-            return "You lose! Rock beats scissors"
+            return "You lose! Rock beats scissors  " + 'My Score is  '  + ++computerScore;
+            
         }
 
         else {
@@ -91,6 +103,6 @@ function playRound(playerSelection,computerSelection){
  <input type="button" id= "noButton" onclick="location.href='https://www.google.com/search?source=hp&ei=0xKfXqaBEoeVlwSjiKiwDg&q=definition+of+a+coward&oq=definition+of+a+coward&gs_lcp=CgZwc3ktYWIQAzIHCAAQRhD5ATICCAAyAggAMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BQgAEIMBOgoIABCDARBGEPkBUNIBWN0dYKoeaAFwAHgAgAHtAogB6B6SAQcxLjguNy4zmAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwjmtoKo7PnoAhWHyoUKHSMECuYQ4dUDCAg&uact=5';" value="No way!" />
   </div>
 
-  <p id="myScore">Your Score</p> <p id="cpuScore">My Score</p>
+  
  </body>
  </html>
