@@ -1,48 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
 <script>
+    // function to generate randome string 
+  
+
 function computerPlay () {
-    let choice = ["rock", "paper" , "scissors"]
-    return choice [Math.floor(Math.random()*textArray.length)];
+    let choice = ["rock", "paper" ,"scissors"];
+    return choice [Math.floor(Math.random()*choice.length)];
+    
 }
 
+// if functions and conditions
 
-function playRound (playerSlection, computerSelection){
-    let computerPlay= computerSelection
-}
+function playRound(playerSelection,computerSelection){
+    computerSelection = computerPlay();
+    playerSelection = prompt("Choose your weapon! Rock, Paper or Scissors")
 
-if (playRound){
+    if (playerSelection.toLocaleLowerCase()==="Rock".toLocaleLowerCase()){
+        if(computerSelection ==="scissors"){
+            return "You win! Rock beats scissors"
+        }
+        else if(computerSelection==="paper"){
+            return "You lose! Paper covers rock!"
+        }
 
-    if (playerSelection == computerSelection)
-   return "Tie!"
-}
+        else {
+            return "Tie game MOFO!"
+        }
 
-else if
-    (playerSelection == "rock" && computerSelection == "scissors"){
-        return "You win! Rock beats scissors"
-}
+        }
+    
+        if (playerSelection.toLocaleLowerCase()==="Paper".toLocaleLowerCase()){
+        if(computerSelection ==="Rock"){
+            return "You win! Paper covers Rock"
+        }
+        else if(computerSelection==="scissors"){
+            return "You lose! Scissors cuts paper"
+        }
 
-else if(computerSelection == "paper"){
-    return "You loose! Paper beats rock"
-}
+        else {
+            return "Tie game MOFO!"
+        }
 
-else if(playerSelection == "paper" && computerSelection == "rock"){
-    return "You win! Paper beats rock"
-}
+        }
 
-else if(computerSelection == "scissors"){
-    return "You lose! Scissors beats paper"
-}
+        if (playerSelection.toLocaleLowerCase()==="Scissors".toLocaleLowerCase()){
+        if(computerSelection ==="Paper"){
+            return "You win! Scissors cuts paper"
+        }
+        else if(computerSelection==="rock"){
+            return "You lose! Rock beats scissors"
+        }
 
-else if(playerSelection == "scissors" && computerSelection =="paper"){
-    return "You win! Scissors beats paper"
-}
+        else {
+            return "Tie game MOFO!"
+        }
 
-else if(computerSelection == "rock") {
-    return "You lose! Rock beats scissors"
-}
+        }    
+
+        }
+    
+    
+    function game(){
+        alert(playRound())
+        alert(playRound())
+        alert(playRound())
+        alert(playRound())
+        alert(playRound())
+    }
 
 
 
 
 
 
-</script>
+
+ </script>
+ <link rel="stylesheet" href="/home/jay/rock-paper-scissors/style.css">
+ </head>
+ <title>Rock Paper Scissors</title>
+  <body>
+
+  <img class="sawImage" src="/home/jay/Downloads/saw.jpg">
+
+<div id ="buttons">
+
+ <button id="yesButton" onclick="game(  )">Yes!</button> 
+ 
+ <input type="button" id= "noButton" onclick="location.href='https://www.google.com/search?source=hp&ei=0xKfXqaBEoeVlwSjiKiwDg&q=definition+of+a+coward&oq=definition+of+a+coward&gs_lcp=CgZwc3ktYWIQAzIHCAAQRhD5ATICCAAyAggAMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BQgAEIMBOgoIABCDARBGEPkBUNIBWN0dYKoeaAFwAHgAgAHtAogB6B6SAQcxLjguNy4zmAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwjmtoKo7PnoAhWHyoUKHSMECuYQ4dUDCAg&uact=5';" value="No way!" />
+  </div>
+
+  <p id="myScore">Your Score</p> <p id="cpuScore">My Score</p>
+ </body>
+ </html>

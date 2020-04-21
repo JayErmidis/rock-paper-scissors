@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+
+}
+
+.sawImage{
+width:500px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+#buttons{
+    display:inline;
+    margin-left: 45%;
+    margin-right: auto;
+}
+
+#myScore{
+    position: relative;
+    left: 200px;
+    bottom: 300px;
+    color: white;
+    font-weight:bold;
+    
+}
+
+#cpuScore{
+    position: relative;
+left: 80%;
+bottom: 330px;
+color: white;
+font-weight: bold;
+}
+
+#yesButton{
+    color:white;
+    background-color: red;
+    padding: 5px;
+}
+
+#noButton{
+    color:white;
+    background-color: red;
+    padding: 5px;
+}
